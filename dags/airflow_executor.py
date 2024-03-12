@@ -6,7 +6,7 @@ from src.airflow_test import testing
 
 default_args= {
     'owner':'airflow',
-    'start_date':datetime(2024,3,8),
+    'start_date':datetime(2024,3,12),
     'retries':1
 }
 
@@ -15,7 +15,7 @@ dag = DAG(
     dag_id= dag_id,
     default_args = default_args,
     #schedule_interval = '@daily'
-    schedule_interval = '*/2 * * * *'
+    schedule_interval = '*/5 * * * *'
 )
 
 
